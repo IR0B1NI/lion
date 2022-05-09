@@ -1,0 +1,90 @@
+[
+    {
+        "city": "Stuttgart",
+        "countryKey": "Country_DE",
+        "institution": "AKAD University",
+        "positionKey": "Position_Study_Bachelor_BusinessInformatics",
+        "startDate": "2020-07-01",
+        "endDate": null,
+        "institutionLink": "https://www.akad.de/",
+        "textKey": "",
+        "resumeElementType": 2
+    },
+    {
+        "city": "Magdeburg",
+        "countryKey": "Country_DE",
+        "institution": "DEVDEER GmbH",
+        "positionKey": "Position_SoftwareDeveloper",
+        "startDate": "2020-03-01",
+        "endDate": null,
+        "institutionLink": "https://devdeer.com/",
+        "textKey": "Text_Devdeer_SoftwareDeveloper",
+        "resumeElementType": 1
+    },
+    {
+        "city": "Magdeburg",
+        "countryKey": "Country_DE",
+        "institution": "AV-TEST GmbH",
+        "positionKey": "Position_Apprentice_SoftwareDevelopment",
+        "startDate": "2017-08-01",
+        "endDate": "2020-01-22",
+        "institutionLink": "https://www.av-test.org/",
+        "textKey": "Text_AvTest_Apprenticeship",
+        "resumeElementType": 1
+    },
+    {
+        "city": "Magdeburg",
+        "countryKey": "Country_DE",
+        "institution": "Berufsbildende Schulen „Otto von Guericke“",
+        "positionKey": "Position_Apprentice_SoftwareDevelopment",
+        "startDate": "2017-08-01",
+        "endDate": "2020-01-22",
+        "institutionLink": "https://bbsovg-magdeburg.de/",
+        "textKey": "Text_School_Apprenticeship",
+        "resumeElementType": 2
+    },
+    {
+        "city": "Magdeburg",
+        "countryKey": "Country_DE",
+        "institution": "Stiftung Umwelt, Natur- und Klimaschutz des Landes Sachsen-Anhalt",
+        "positionKey": "Position_FOEJ",
+        "startDate": "2016-09-01",
+        "endDate": "2017-07-31",
+        "institutionLink": "https://www.sunk-lsa.de/",
+        "textKey": "Text_FOEJ",
+        "resumeElementType": 3
+    },
+    {
+        "city": "Stuttgart",
+        "countryKey": "Country_DE",
+        "institution": "PricewaterhouseCoopers GmbH",
+        "positionKey": "Position_DualStudies_RSW",
+        "startDate": "2015-10-01",
+        "endDate": "2016-06-30",
+        "institutionLink": "https://www.pwc.de/",
+        "textKey": "Text_Pwc_RSW",
+        "resumeElementType": 1
+    },
+    {
+        "city": "Stuttgart",
+        "countryKey": "Country_DE",
+        "institution": "Duale Hochschule Baden-Württemberg",
+        "positionKey": "Position_DualStudies_RSW",
+        "startDate": "2015-10-01",
+        "endDate": "2016-06-30",
+        "institutionLink": "https://www.dhbw.de/",
+        "textKey": "Text_University_RSW",
+        "resumeElementType": 2
+    },
+    {
+        "city": "Goslar",
+        "countryKey": "Country_DE",
+        "institution": "Berufsbildende Schulen 1 Goslar -Am Stadtgarten-",
+        "positionKey": "Position_School_ALevel",
+        "startDate": "2012-07-23",
+        "endDate": "2015-07-01",
+        "institutionLink": "http://www.bbs1goslar.de/",
+        "textKey": "Text_School_ALevel",
+        "resumeElementType": 2
+    }
+]

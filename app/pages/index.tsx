@@ -1,0 +1,152 @@
+import React from 'react';
+import { GetServerSideProps, NextPage } from 'next';
+import { useTranslation } from 'react-i18next';
+import { BasicLayout } from '../components/layouts/BasicLayout';
+import Image from 'next/image';
+import { ResumeTimeline } from '../components/ResumeTimeline';
+import { IResumeElement } from '../types/IResumeElement';
+import { SkillTile } from '../components/SkillTile';
+import resumeData from '../assets/resume.json';
+
+/**
+ * Interface for the home page properties.
+ */
+interface IHomeProps {
+    /** The resume data. */
+    data: IResumeElement[];
+}
+
+/**
+ * The page component to render at "/".
+ *
+ * @param {IHomeProps} props The home page properties.
+ * @returns {NextPage} The home page component.
+ */
+const Home: NextPage<IHomeProps> = (props) => {
+    /** Access to translations. */
+    const { t } = useTranslation();
+
+    return (
+        <BasicLayout>
+            <div className="flex flex-1 justify-center">
+                <div className="flex flex-1 flex-col max-w-screen-lg py-4 overflow-x-hidden">
+                    <div className="mt-20 mb-16">
+                        <div className="flex justify-center">
+                            <Image width={250} height={250} className="rounded-full" src="/images/profile.png" alt="" />
+                        </div>
+                        <h1 className="flex justify-center mt-10">Robin Thöne</h1>
+                    </div>
+                    <h2 className="flex w-full mt-16 mb-7 justify-center">{t('Home_Resume_Headline')}</h2>
+                    <ResumeTimeline data={props.data} />
+                    <h2 className="flex w-full mt-16 mb-7 justify-center">{t('Home_Skills_Headline')}</h2>
+                    <div className="flex flex-wrap justify-center px-4">
+                        <div className="m-3">
+                            <SkillTile
+                                text="Das ist Azure"
+                                title="Azure"
+                                icon={<Image width={42} height={42} className="bg-transparent rounded-full" src="/images/azure.svg" alt="" />}
+                                tileColor="#2C89D6"
+                            />
+                        </div>
+                        <div className="m-3 flex">
+                            <SkillTile
+                                text="Das ist C#."
+                                title="C#"
+                                icon={<Image width={42} height={42} className="bg-transparent rounded-full" src="/images/csharp.svg" alt="" />}
+                                tileColor="#A179DC"
+                            />
+                        </div>
+                        <div className="m-3">
+                            <SkillTile
+                                text="Das ist JavaScript."
+                                title="JavaScript"
+                                icon={<Image width={42} height={42} className="bg-transparent rounded-full" src="/images/js.svg" alt="" />}
+                                tileColor="#E6A329"
+                            />
+                        </div>
+                        <div className="m-3">
+                            <SkillTile
+                                text="Das ist TypeScript."
+                                title="TypeScript"
+                                icon={<Image width={42} height={42} className="bg-transparent rounded-full" src="/images/ts.svg" alt="" />}
+                                tileColor="#3178C6"
+                            />
+                        </div>
+                        <div className="m-3">
+                            <SkillTile
+                                text="Das ist Git."
+                                title="Git"
+                                icon={<Image width={42} height={42} className="bg-transparent rounded-full" src="/images/git.svg" alt="" />}
+                                tileColor="#DE4C36"
+                            />
+                        </div>
+                        <div className="m-3">
+                            <SkillTile
+                                text="Das ist Docker."
+                                title="Docker"
+                                icon={<Image width={42} height={24} className="bg-transparent rounded-full" src="/images/docker.svg" alt="" />}
+                                tileColor="#309AC9"
+                            />
+                        </div>
+                        <div className="m-3">
+                            <SkillTile
+                                text="Das ist HTML."
+                                title="HTML"
+                                icon={<Image width={42} height={42} className="bg-transparent rounded-full" src="/images/html.svg" alt="" />}
+                                tileColor="#F15124"
+                            />
+                        </div>
+                        <div className="m-3">
+                            <SkillTile
+                                text="Das ist CSS."
+                                title="CSS"
+                                icon={<Image width={42} height={42} className="bg-transparent rounded-full" src="/images/css.svg" alt="" />}
+                                tileColor="#4353AD"
+                            />
+                        </div>
+
+                        <div className="m-3">
+                            <SkillTile
+                                text="Das ist Java."
+                                title="Java"
+                                icon={<Image width={42} height={42} className="bg-transparent rounded-full" src="/images/java.svg" alt="" />}
+                                tileColor="#E76F00"
+                            />
+                        </div>
+                        <div className="m-3">
+                            <SkillTile
+                                text="Das ist React."
+                                title="React"
+                                icon={<Image width={42} height={42} className="bg-transparent rounded-full" src="/images/react.svg" alt="" />}
+                                tileColor="#53C1DE"
+                            />
+                        </div>
+                        <div className="m-3">
+                            <SkillTile
+                                text="Das ist Next.js."
+                                title="Next.js"
+                                icon={<Image width={42} height={24} className="bg-transparent rounded-full" src="/images/nextjs.svg" alt="" />}
+                                tileColor="#000000"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </BasicLayout>
+    );
+};
+
+/**
+ * Server side executed method to inject properties into the component.
+ *
+ * @returns {Promise<{props: IHomeProps}>} The props object to inject in the component.
+ */
+export const getServerSideProps: GetServerSideProps = async (): Promise<{ props: IHomeProps }> => {
+    return {
+        props: {
+            data: resumeData as IResumeElement[],
+        },
+    };
+};
+
+export default Home;
