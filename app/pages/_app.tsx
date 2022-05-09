@@ -59,6 +59,7 @@ const App: FunctionComponent<AppProps> = ({ Component, pageProps }: AppProps) =>
             <meta property="og:image" content={openGraphImageUrl} />
             <meta property="og:locale" content="en_US" />
             <meta property="og:locale:alternate" content="de_DE" />
+            <meta name="google-site-verification" content="6E4fkyF9xXTXSHWCY2loZyjTPYV3DS6rMEEXRBuW0TU" />
         </Head>
     );
 
