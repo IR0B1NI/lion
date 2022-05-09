@@ -26,16 +26,20 @@ const App: FunctionComponent<AppProps> = ({ Component, pageProps }: AppProps) =>
      * Initialize the application.
      */
     useEffect(() => {
-        // Initialize the config promise.
-        if (typeof window !== 'undefined') {
-            const storedUserSettingsString = localStorage.getItem('userSettings');
-            if (storedUserSettingsString) {
-                const storedUserSettings = JSON.parse(storedUserSettingsString);
-                Store.getActions().UserModel.updateUserSettings(storedUserSettings ? storedUserSettings : { language: '' });
-            }
+        const storedSettingsString = localStorage.getItem('userSettings');
+        Store.getActions().UserModel.updateUserSettings(
+            storedSettingsString
+                ? JSON.parse(storedSettingsString)
+                : {
+                    language: '',
+                }
+        );
+        const storedUserSettings = storedSettingsString ? JSON.parse(storedSettingsString) : undefined;
+        if (storedUserSettings) {
+            Store.getActions().UserModel.updateUserSettings(storedUserSettings);
         }
-        // Initialize i18next.
         const initLanguage = Store.getState().UserModel.userSettings?.language ? Store.getState().UserModel.userSettings?.language : getBrowserLanguageCodeShort();
+        // Initialize i18next.
         initialize(initLanguage).then((i) => {
             setI18nInstance(i);
         });
