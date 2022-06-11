@@ -1,7 +1,8 @@
-import React, { FunctionComponent } from 'react';
-import { LanguageSelector } from '../LanguageSelector';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedinIn, faXing } from '@fortawesome/free-brands-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import React, { FunctionComponent } from 'react';
+
+import { LanguageSelector } from '../LanguageSelector';
 
 /**
  * Top menu that contains routes and actions.

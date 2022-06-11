@@ -1,10 +1,12 @@
 import 'react-vertical-timeline-component/style.min.css';
-import React, { FunctionComponent } from 'react';
-import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
+
 import { AcademicCapIcon, BriefcaseIcon, ExternalLinkIcon, UserGroupIcon } from '@heroicons/react/solid';
+import React, { FunctionComponent } from 'react';
+import { useTranslation } from 'react-i18next';
+import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
+
 import { IResumeElement } from '../types/IResumeElement';
 import { ResumeElementType } from '../types/ResumeElementType';
-import { useTranslation } from 'react-i18next';
 
 /**
  * Interface for the resume timeline properties.
@@ -16,7 +18,7 @@ export interface IResumeTimelineProps {
 
 /**
  * The timeline component to display resume data elements.
- * 
+ *
  * @param {IResumeTimelineProps} props The properties.
  * @returns {FunctionComponent} The resume timeline component.
  */
