@@ -1,12 +1,13 @@
-import React from 'react';
 import { GetServerSideProps, NextPage } from 'next';
-import { useTranslation } from 'react-i18next';
-import { BasicLayout } from '../components/layouts/BasicLayout';
 import Image from 'next/image';
-import { ResumeTimeline } from '../components/ResumeTimeline';
-import { IResumeElement } from '../types/IResumeElement';
-import { SkillTile } from '../components/SkillTile';
+import React from 'react';
+import { useTranslation } from 'react-i18next';
+
 import resumeData from '../assets/resume.json';
+import { BasicLayout } from '../components/layouts/BasicLayout';
+import { ResumeTimeline } from '../components/ResumeTimeline';
+import { SkillTile } from '../components/SkillTile';
+import { IResumeElement } from '../types/IResumeElement';
 
 /**
  * Interface for the home page properties.
