@@ -1,7 +1,8 @@
-import { GetServerSideProps, NextPage } from 'next';
+import { GetStaticProps, NextPage } from 'next';
 import Image from 'next/image';
+import { useTranslation } from 'next-i18next';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import React from 'react';
-import { useTranslation } from 'react-i18next';
 
 import resumeData from '../assets/resume.json';
 import { BasicLayout } from '../components/layouts/BasicLayout';
@@ -142,9 +143,11 @@ const Home: NextPage<IHomeProps> = (props) => {
  *
  * @returns {Promise<{props: IHomeProps}>} The props object to inject in the component.
  */
-export const getServerSideProps: GetServerSideProps = async (): Promise<{ props: IHomeProps }> => {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export const getStaticProps: GetStaticProps = async ({ locale }: { [key: string]: any }) => {
     return {
         props: {
+            ...(await serverSideTranslations(locale, ['common', 'footer'])),
             data: resumeData as IResumeElement[],
         },
     };

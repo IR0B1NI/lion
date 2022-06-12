@@ -1,6 +1,6 @@
 import Link from 'next/link';
+import { useTranslation } from 'next-i18next';
 import React, { FunctionComponent } from 'react';
-import { useTranslation } from 'react-i18next';
 
 /**
  * Component to render a footer menu.
