@@ -34,7 +34,6 @@ const App: FunctionComponent<AppProps> = ({ Component, pageProps }: AppProps) =>
         if (storedUserSettings) {
             Store.getActions().UserModel.updateUserSettings(storedUserSettings);
         }
-        const initLanguage = Store.getState().UserModel.userSettings?.language ? Store.getState().UserModel.userSettings?.language : getBrowserLanguageCodeShort();
     }, []);
 
     /**

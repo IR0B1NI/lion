@@ -22,6 +22,8 @@ interface ILanguageButtonProps {
     ariaLabel: string;
     /** The text to render. */
     text: string;
+    /** The on click callback. */
+    onClick: () => void;
 }
 
 /**
@@ -31,7 +33,7 @@ interface ILanguageButtonProps {
  * @returns {FunctionComponent} The styled button component to choose a language.
  */
 const LanguageButton: FunctionComponent<ILanguageButtonProps> = (props) => (
-    <button aria-label={props.ariaLabel} disabled={props.isActiveLanguage} className="py-2 px-6 min-w-full">
+    <button aria-label={props.ariaLabel} disabled={props.isActiveLanguage} className="py-2 px-6 min-w-full" onClick={props.onClick}>
         {props.text}
     </button>
 );
@@ -82,14 +84,24 @@ export const LanguageSelector: FunctionComponent = () => {
                         <li>
                             <Link href={router.asPath} locale={'en'}>
                                 <a>
-                                    <LanguageButton ariaLabel={t('Language_Button_En_Aria_Label')} isActiveLanguage={i18n.language === 'en'} text={t('Language_Option_En')} />
+                                    <LanguageButton
+                                        ariaLabel={t('Language_Button_En_Aria_Label')}
+                                        isActiveLanguage={i18n.language === 'en'}
+                                        text={t('Language_Option_En')}
+                                        onClick={() => updateLanguageSetting('en')}
+                                    />
                                 </a>
                             </Link>
                         </li>
                         <li>
                             <Link href={router.asPath} locale={'de'}>
                                 <a>
-                                    <LanguageButton ariaLabel={t('Language_Button_De_Aria_Label')} isActiveLanguage={i18n.language === 'de'} text={t('Language_Option_De')} />
+                                    <LanguageButton
+                                        ariaLabel={t('Language_Button_De_Aria_Label')}
+                                        isActiveLanguage={i18n.language === 'de'}
+                                        text={t('Language_Option_De')}
+                                        onClick={() => updateLanguageSetting('de')}
+                                    />
                                 </a>
                             </Link>
                         </li>
