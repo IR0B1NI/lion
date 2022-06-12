@@ -1,12 +1,9 @@
 import '../styles/global-styles.css';
 
-import { StoreProvider } from 'easy-peasy';
 import { AppProps } from 'next/app';
 import Head from 'next/head';
 import { appWithTranslation } from 'next-i18next';
-import React, { FunctionComponent, useEffect } from 'react';
-
-import { Store } from '../store/Store';
+import React, { FunctionComponent } from 'react';
 
 /**
  * The main entry point of the next js application.
@@ -17,24 +14,6 @@ import { Store } from '../store/Store';
 const App: FunctionComponent<AppProps> = ({ Component, pageProps }: AppProps) => {
     /** The public url to use for the open graph image access. */
     const openGraphImageUrl = 'https://robin-thoene.com/open-graph.png';
-
-    /**
-     * Initialize the application.
-     */
-    useEffect(() => {
-        const storedSettingsString = localStorage.getItem('userSettings');
-        Store.getActions().UserModel.updateUserSettings(
-            storedSettingsString
-                ? JSON.parse(storedSettingsString)
-                : {
-                    language: '',
-                }
-        );
-        const storedUserSettings = storedSettingsString ? JSON.parse(storedSettingsString) : undefined;
-        if (storedUserSettings) {
-            Store.getActions().UserModel.updateUserSettings(storedUserSettings);
-        }
-    }, []);
 
     /**
      * The custom head component.
@@ -59,11 +38,10 @@ const App: FunctionComponent<AppProps> = ({ Component, pageProps }: AppProps) =>
     );
 
     return (
-        /* @ts-expect-error: Ignore no children prop error. */
-        <StoreProvider store={Store}>
+        <>
             <CustomHead />
             <Component {...pageProps} />
-        </StoreProvider>
+        </>
     );
 };
 
