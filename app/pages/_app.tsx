@@ -1,14 +1,11 @@
 import '../styles/global-styles.css';
 
 import { StoreProvider } from 'easy-peasy';
-import { i18n } from 'i18next';
 import { AppProps } from 'next/app';
 import Head from 'next/head';
-import React, { FunctionComponent, useEffect, useState } from 'react';
-import { I18nextProvider } from 'react-i18next';
+import { appWithTranslation } from 'next-i18next';
+import React, { FunctionComponent, useEffect } from 'react';
 
-import { getBrowserLanguageCodeShort } from '../helper/BrowserHelper';
-import { initialize } from '../helper/LocalizationHelper';
 import { Store } from '../store/Store';
 
 /**
@@ -18,8 +15,6 @@ import { Store } from '../store/Store';
  * @returns {FunctionComponent} The application component.
  */
 const App: FunctionComponent<AppProps> = ({ Component, pageProps }: AppProps) => {
-    /** The state of the i18n instance. */
-    const [i18nInstance, setI18nInstance] = useState<i18n | undefined>(undefined);
     /** The public url to use for the open graph image access. */
     const openGraphImageUrl = 'https://robin-thoene.com/open-graph.png';
 
@@ -40,10 +35,6 @@ const App: FunctionComponent<AppProps> = ({ Component, pageProps }: AppProps) =>
             Store.getActions().UserModel.updateUserSettings(storedUserSettings);
         }
         const initLanguage = Store.getState().UserModel.userSettings?.language ? Store.getState().UserModel.userSettings?.language : getBrowserLanguageCodeShort();
-        // Initialize i18next.
-        initialize(initLanguage).then((i) => {
-            setI18nInstance(i);
-        });
     }, []);
 
     /**
@@ -68,17 +59,13 @@ const App: FunctionComponent<AppProps> = ({ Component, pageProps }: AppProps) =>
         </Head>
     );
 
-    return i18nInstance ? (
+    return (
         /* @ts-expect-error: Ignore no children prop error. */
         <StoreProvider store={Store}>
-            <I18nextProvider i18n={i18nInstance}>
-                <CustomHead />
-                <Component {...pageProps} />
-            </I18nextProvider>
+            <CustomHead />
+            <Component {...pageProps} />
         </StoreProvider>
-    ) : (
-        <CustomHead />
     );
 };
 
-export default App;
+export default appWithTranslation(App);
