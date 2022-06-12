@@ -1,8 +1,8 @@
 import 'react-vertical-timeline-component/style.min.css';
 
 import { AcademicCapIcon, BriefcaseIcon, ExternalLinkIcon, UserGroupIcon } from '@heroicons/react/solid';
+import { useTranslation } from 'next-i18next';
 import React, { FunctionComponent } from 'react';
-import { useTranslation } from 'react-i18next';
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 
 import { IResumeElement } from '../types/IResumeElement';
