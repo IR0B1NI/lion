@@ -44,7 +44,6 @@ const Home: NextPage<IHomeProps> = (props) => {
                     <div className="flex flex-wrap justify-center px-4">
                         <div className="m-3">
                             <SkillTile
-                                text="Das ist Azure"
                                 title="Azure"
                                 icon={<Image width={42} height={42} className="bg-transparent rounded-full" src="/images/azure.svg" alt="" />}
                                 tileColor="#2C89D6"
@@ -52,7 +51,6 @@ const Home: NextPage<IHomeProps> = (props) => {
                         </div>
                         <div className="m-3 flex">
                             <SkillTile
-                                text="Das ist C#."
                                 title="C#"
                                 icon={<Image width={42} height={42} className="bg-transparent rounded-full" src="/images/csharp.svg" alt="" />}
                                 tileColor="#A179DC"
@@ -60,7 +58,6 @@ const Home: NextPage<IHomeProps> = (props) => {
                         </div>
                         <div className="m-3">
                             <SkillTile
-                                text="Das ist JavaScript."
                                 title="JavaScript"
                                 icon={<Image width={42} height={42} className="bg-transparent rounded-full" src="/images/js.svg" alt="" />}
                                 tileColor="#E6A329"
@@ -68,7 +65,6 @@ const Home: NextPage<IHomeProps> = (props) => {
                         </div>
                         <div className="m-3">
                             <SkillTile
-                                text="Das ist TypeScript."
                                 title="TypeScript"
                                 icon={<Image width={42} height={42} className="bg-transparent rounded-full" src="/images/ts.svg" alt="" />}
                                 tileColor="#3178C6"
@@ -76,7 +72,6 @@ const Home: NextPage<IHomeProps> = (props) => {
                         </div>
                         <div className="m-3">
                             <SkillTile
-                                text="Das ist Git."
                                 title="Git"
                                 icon={<Image width={42} height={42} className="bg-transparent rounded-full" src="/images/git.svg" alt="" />}
                                 tileColor="#DE4C36"
@@ -84,7 +79,6 @@ const Home: NextPage<IHomeProps> = (props) => {
                         </div>
                         <div className="m-3">
                             <SkillTile
-                                text="Das ist Docker."
                                 title="Docker"
                                 icon={<Image width={42} height={24} className="bg-transparent rounded-full" src="/images/docker.svg" alt="" />}
                                 tileColor="#309AC9"
@@ -92,7 +86,6 @@ const Home: NextPage<IHomeProps> = (props) => {
                         </div>
                         <div className="m-3">
                             <SkillTile
-                                text="Das ist HTML."
                                 title="HTML"
                                 icon={<Image width={42} height={42} className="bg-transparent rounded-full" src="/images/html.svg" alt="" />}
                                 tileColor="#F15124"
@@ -100,16 +93,13 @@ const Home: NextPage<IHomeProps> = (props) => {
                         </div>
                         <div className="m-3">
                             <SkillTile
-                                text="Das ist CSS."
                                 title="CSS"
                                 icon={<Image width={42} height={42} className="bg-transparent rounded-full" src="/images/css.svg" alt="" />}
                                 tileColor="#4353AD"
                             />
                         </div>
-
                         <div className="m-3">
                             <SkillTile
-                                text="Das ist Java."
                                 title="Java"
                                 icon={<Image width={42} height={42} className="bg-transparent rounded-full" src="/images/java.svg" alt="" />}
                                 tileColor="#E76F00"
@@ -117,7 +107,6 @@ const Home: NextPage<IHomeProps> = (props) => {
                         </div>
                         <div className="m-3">
                             <SkillTile
-                                text="Das ist React."
                                 title="React"
                                 icon={<Image width={42} height={42} className="bg-transparent rounded-full" src="/images/react.svg" alt="" />}
                                 tileColor="#53C1DE"
@@ -125,7 +114,6 @@ const Home: NextPage<IHomeProps> = (props) => {
                         </div>
                         <div className="m-3">
                             <SkillTile
-                                text="Das ist Next.js."
                                 title="Next.js"
                                 icon={<Image width={42} height={24} className="bg-transparent rounded-full" src="/images/nextjs.svg" alt="" />}
                                 tileColor="#000000"

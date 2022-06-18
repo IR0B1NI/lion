@@ -6,8 +6,6 @@ import React, { FunctionComponent } from 'react';
 export interface ISkillTileProps {
     /** The title of the tile. */
     title: string;
-    /** The text to display on the tile. */
-    text: string;
     /** The icon component to use on the tile. */
     icon: JSX.Element;
     /** The hex code of the main color to use for the tile. */
