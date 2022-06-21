@@ -135,7 +135,7 @@ const Home: NextPage<IHomeProps> = (props) => {
 export const getStaticProps: GetStaticProps = async ({ locale }: { [key: string]: any }) => {
     return {
         props: {
-            ...(await serverSideTranslations(locale, ['common', 'footer'])),
+            ...(await serverSideTranslations(locale, ['common'])),
             data: resumeData as IResumeElement[],
         },
     };
