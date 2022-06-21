@@ -23,9 +23,9 @@ interface ILanguageButtonProps {
 }
 
 /**
- * Custom button component for the language list.\
+ * Custom button component for the language list.
  *
- * @param {object} props The properties of the custom button.
+ * @param {ILanguageButtonProps} props The properties of the custom button.
  * @returns {FunctionComponent} The styled button component to choose a language.
  */
 const LanguageButton: FunctionComponent<ILanguageButtonProps> = (props) => (
