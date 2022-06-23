@@ -33,8 +33,8 @@ const Home: NextPage<IHomeProps> = (props) => {
             <div className="flex flex-1 justify-center">
                 <div className="flex flex-1 flex-col max-w-screen-lg py-4 overflow-x-hidden">
                     <div className="mt-20 mb-16">
-                        <div className="flex justify-center">
-                            <Image width={250} height={250} className="rounded-full" src="/images/profile.png" alt="" />
+                        <div className="flex justify-center mask mask-squircle">
+                            <Image width={250} height={250} src="/images/profile.png" alt="" />
                         </div>
                         <h1 className="flex justify-center mt-10">Robin Thöne</h1>
                     </div>
