@@ -16,10 +16,6 @@ body,
     @apply text-sm text-black;
 }
 
-button {
-    @apply active:bg-gray-200 bg-transparent min-w-max rounded-lg disabled:opacity-50 disabled:bg-transparent;
-}
-
 h1 {
     @apply text-4xl;
 }
