@@ -20,5 +20,6 @@
     "Home_Skills_Headline": "Skills",
     "Language_Button_Aria_Label": "Open language menu",
     "Language_Button_En_Aria_Label": "Switch to English",
-    "Language_Button_De_Aria_Label": "Umschalten auf Deutsch"
+    "Language_Button_De_Aria_Label": "Umschalten auf Deutsch",
+    "ProfileImage_AltText": "Profile picture"
 }
