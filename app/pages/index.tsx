@@ -45,77 +45,77 @@ const Home: NextPage<IHomeProps> = (props) => {
                         <div className="m-3">
                             <SkillTile
                                 title="Azure"
-                                icon={<Image width={42} height={42} className="bg-transparent rounded-full" src="/images/azure.svg" alt="" />}
+                                icon={<Image width={42} height={42} className="bg-transparent rounded-full" src="/images/azure.svg" alt="Azure" />}
                                 tileColor="#2C89D6"
                             />
                         </div>
                         <div className="m-3 flex">
                             <SkillTile
                                 title="C#"
-                                icon={<Image width={42} height={42} className="bg-transparent rounded-full" src="/images/csharp.svg" alt="" />}
+                                icon={<Image width={42} height={42} className="bg-transparent rounded-full" src="/images/csharp.svg" alt="C#" />}
                                 tileColor="#A179DC"
                             />
                         </div>
                         <div className="m-3">
                             <SkillTile
                                 title="JavaScript"
-                                icon={<Image width={42} height={42} className="bg-transparent rounded-full" src="/images/js.svg" alt="" />}
+                                icon={<Image width={42} height={42} className="bg-transparent rounded-full" src="/images/js.svg" alt="JavaScript" />}
                                 tileColor="#E6A329"
                             />
                         </div>
                         <div className="m-3">
                             <SkillTile
                                 title="TypeScript"
-                                icon={<Image width={42} height={42} className="bg-transparent rounded-full" src="/images/ts.svg" alt="" />}
+                                icon={<Image width={42} height={42} className="bg-transparent rounded-full" src="/images/ts.svg" alt="TypeScript" />}
                                 tileColor="#3178C6"
                             />
                         </div>
                         <div className="m-3">
                             <SkillTile
                                 title="Git"
-                                icon={<Image width={42} height={42} className="bg-transparent rounded-full" src="/images/git.svg" alt="" />}
+                                icon={<Image width={42} height={42} className="bg-transparent rounded-full" src="/images/git.svg" alt="Git" />}
                                 tileColor="#DE4C36"
                             />
                         </div>
                         <div className="m-3">
                             <SkillTile
                                 title="Docker"
-                                icon={<Image width={42} height={24} className="bg-transparent rounded-full" src="/images/docker.svg" alt="" />}
+                                icon={<Image width={42} height={24} className="bg-transparent rounded-full" src="/images/docker.svg" alt="Docker" />}
                                 tileColor="#309AC9"
                             />
                         </div>
                         <div className="m-3">
                             <SkillTile
                                 title="HTML"
-                                icon={<Image width={42} height={42} className="bg-transparent rounded-full" src="/images/html.svg" alt="" />}
+                                icon={<Image width={42} height={42} className="bg-transparent rounded-full" src="/images/html.svg" alt="HTML" />}
                                 tileColor="#F15124"
                             />
                         </div>
                         <div className="m-3">
                             <SkillTile
                                 title="CSS"
-                                icon={<Image width={42} height={42} className="bg-transparent rounded-full" src="/images/css.svg" alt="" />}
+                                icon={<Image width={42} height={42} className="bg-transparent rounded-full" src="/images/css.svg" alt="CSS" />}
                                 tileColor="#4353AD"
                             />
                         </div>
                         <div className="m-3">
                             <SkillTile
                                 title="Java"
-                                icon={<Image width={42} height={42} className="bg-transparent rounded-full" src="/images/java.svg" alt="" />}
+                                icon={<Image width={42} height={42} className="bg-transparent rounded-full" src="/images/java.svg" alt="Java" />}
                                 tileColor="#E76F00"
                             />
                         </div>
                         <div className="m-3">
                             <SkillTile
                                 title="React"
-                                icon={<Image width={42} height={42} className="bg-transparent rounded-full" src="/images/react.svg" alt="" />}
+                                icon={<Image width={42} height={42} className="bg-transparent rounded-full" src="/images/react.svg" alt="React" />}
                                 tileColor="#53C1DE"
                             />
                         </div>
                         <div className="m-3">
                             <SkillTile
                                 title="Next.js"
-                                icon={<Image width={42} height={24} className="bg-transparent rounded-full" src="/images/nextjs.svg" alt="" />}
+                                icon={<Image width={42} height={24} className="bg-transparent rounded-full" src="/images/nextjs.svg" alt="Next.js" />}
                                 tileColor="#000000"
                             />
                         </div>
